@@ -1,0 +1,90 @@
+#Membership-section {
+  background-color: #eaf6ff;
+  margin: 0px 80px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.membership-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.membership-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1b1b1b;
+}
+
+.membership-subtext {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.membership-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+}
+
+.membership-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.membership-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.join-btn {
+  background-color: #b3e100;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #a0cb00;
+}
+
+@media (max-width: 768px) {
+  #Membership-section{
+    width: 645px;
+  }
+  .membership-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

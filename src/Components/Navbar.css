@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+  height: 70px;
+  align-items: center;
+}
+
+.navbar .left {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(141, 141, 141);
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(178, 219, 40);
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: rgb(60, 60, 60);
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #444;
+}
+
+.dark-mode {
+  background-color: #121212;
+}
+
+.dark-mode .navbar {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.dark-mode .navbar ul li a:hover {
+  color: white;
+}
+
+.dark-mode #Home .home-text {
+  color: white;
+  background-color: rgb(107 138 0);
+}
+
+.dark-mode #Home .home-tags {
+  color: white;
+  background-color: #8d97a9;  
+}
+
+.dark-mode #About {
+  color: white;
+  background-color: rgb(107 138 0);
+}
+
+.dark-mode #Services-section {
+  color: white;
+}
+
+.dark-mode .services-subtext {
+  color: white;
+}
+
+.dark-mode .card-title {
+  color: black;
+}
+
+.nav-icon{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    width: 855px;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar .left{
+    font-size: 35px;
+  }
+  .theme-toggle{
+    display: none;
+    
+  }
+  .nav-icon {
+    display: block;
+    cursor: pointer;
+    padding-top: 15px;
+  }
+
+  .mid {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+  }
+
+  .mid.active {
+    width: 900px;
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  .mid ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding-top: 55px;
+    gap: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mid ul li{
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  .mid ul li a {
+    color: black;
+    font-size: 22px;
+  }
+
+  .mid ul li a:hover {
+    color: rgb(178, 219, 40);
+  }
+}

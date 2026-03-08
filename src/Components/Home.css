@@ -1,0 +1,191 @@
+#Home {
+    margin: 50px 80px;
+    display: flex;
+}
+
+.fitness-icon {
+    width: 60px;
+}
+
+.home-main-text-1,
+.home-main-text-2 {
+    font-size: 53px;
+    font-weight: 750;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+
+.home-main-text-1 {
+    margin-top: 20px;
+}
+
+.home-main-text-2 {
+    top: 260px;
+    margin-top: 20px;
+}
+
+.gym-1 {
+    width: 55px;
+    border-radius: 10px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.gym-2 {
+    width: 500px;
+    height: 420px;
+    border-radius: 25px;
+    position: relative;
+    left: 255px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-sec-text {
+    position: absolute;
+    top: 326px;
+    z-index: 2;
+    background-color: white;
+    padding: 15px;
+    padding-top: 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.connect-btn {
+    padding: 10px 20px;
+    background-color: rgb(178, 219, 40);
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+    position: absolute;
+    top: 430px;
+    left: 92px;
+}
+
+.connect-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.home-text {
+    position: absolute;
+    right: 104px;
+    background-color: rgb(219 237 157);
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 305px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Home-tags {
+    background-color: #d0dbef;
+    padding: 23px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 305px;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 3;
+    right: 104px;
+    top: 223px;
+}
+
+.tag {
+    background-color: #fff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.rotate-left {
+    transform: rotate(-5deg);
+}
+
+.rotate-right {
+    transform: rotate(4deg);
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    #Home{
+        display: flex;
+        flex-direction: column;
+        width: 740px;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .left{
+        width: 670px;
+    }   
+
+    .home-main-text-1,
+    .home-main-text-2{
+        position: static;
+        padding: 0px;
+        margin: 0px;
+        font-size: 70px;
+    }
+
+    .home-sec-text{
+        margin: 0;
+        padding: 0;
+    }
+
+    .gym-2{
+        position: static;
+        margin-top: 20px;
+        width: 670px;
+    }
+    
+    .home-sec-text{
+        position: static;
+        font-size: 25px;
+    }
+
+    .connect-btn{
+        position: static;
+        margin: 20px 0px;
+        font-size: 22px;
+    }
+
+    .right{
+        margin-top: 40px;
+    }
+
+    .home-text{
+        position: static;
+        width: 670px;
+    }
+
+    .Home-tags{
+        position: static;
+        width: 670px;
+    }
+}
