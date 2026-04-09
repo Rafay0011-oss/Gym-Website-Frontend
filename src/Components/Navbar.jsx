@@ -10,6 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark-mode")
