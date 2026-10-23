@@ -1,10 +1,12 @@
 import React from 'react'
 import "./Navbar.css"
 import { useState, useEffect } from 'react'
+import { useAuth } from '../context/AuthContext'
 
-const Navbar = () => {
+const Navbar = ({ onLoginClick }) => {
   const [darkMode, setDarkMode] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
+  const { user, isAuthenticated, logout } = useAuth();
 
 
   const toggleMenu = () => {
@@ -39,6 +41,15 @@ const Navbar = () => {
         >
           {darkMode ? "🌙 Dark" : "☀️ Light"}
         </button>
+        {isAuthenticated ? (
+          <button className="theme-toggle" onClick={logout}>
+            👋 {user.name.split(' ')[0]}
+          </button>
+        ) : (
+          <button className="theme-toggle" onClick={onLoginClick}>
+            🔑 Login
+          </button>
+        )}
       </div>
         <div className="nav-icon" id="nav-icon" onClick={toggleMenu}>
           ☰

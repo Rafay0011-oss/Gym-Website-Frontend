@@ -4,7 +4,7 @@ import gymImg1 from "../assets/gym-1.jpg"
 import gymImg2 from "../assets/gym-2.jpg"
 import "./Home.css"
 
-const Home = () => {
+const Home = ({ onConnectClick }) => {
   return (
     <div id='Home'>
         <div className="left">
@@ -16,7 +16,7 @@ const Home = () => {
               <p className='home-sec-text'>
                 Personalized coaching to help you achive your <br /> health and fitness goals with confidence
               </p>
-            <button className="connect-btn">
+            <button className="connect-btn" onClick={onConnectClick}>
               Connect Now
             </button>
         </div>

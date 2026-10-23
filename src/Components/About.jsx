@@ -4,7 +4,7 @@ import dumbells from "../assets/dumbbell.png"
 import treadmill from "../assets/treadmill.png"
 import "./About.css"
 
-const About = () => {
+const About = ({ onJoinClick }) => {
     return (
         <div id='About'>
             <div className="about-left">
@@ -14,7 +14,7 @@ const About = () => {
                         <div className="about-header-left-large">Join FitClub</div>
                     </div>
                     <div className="about-header-right">
-                        <button className='about-btn'>Join Us</button>
+                        <button className='about-btn' onClick={onJoinClick}>Join Us</button>
                     </div>
                 </div>
                 <div className="about-left-img">
